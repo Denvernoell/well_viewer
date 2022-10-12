@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1860,
+          "bottomRow": 2430,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -289,10 +289,11 @@
                     },
                     {
                       "boxShadow": "none",
-                      "isVisibleDownload": false,
+                      "multiRowSelection": true,
+                      "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd.svg",
                       "topRow": 4,
-                      "isSortable": false,
+                      "isSortable": true,
                       "type": "TABLE_WIDGET",
                       "animateLoading": true,
                       "dynamicBindingPathList": [
@@ -378,9 +379,9 @@
                       "leftColumn": 0,
                       "delimiter": ",",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisibleFilters": false,
+                      "isVisibleFilters": true,
                       "isVisible": true,
-                      "enableClientSideSearch": false,
+                      "enableClientSideSearch": true,
                       "version": 3,
                       "totalRecordsCount": "",
                       "isLoading": false,
@@ -920,7 +921,7 @@
                       "serverSidePaginationEnabled": false,
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "LEFT",
-                      "isVisibleSearch": false,
+                      "isVisibleSearch": true,
                       "isVisiblePagination": true,
                       "verticalAlignment": "CENTER"
                     },
@@ -1354,8 +1355,8 @@
                 "parent",
                 "group"
               ],
-              "topRow": 90,
-              "bottomRow": 184,
+              "topRow": 91,
+              "bottomRow": 241,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -2886,6 +2887,16 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Directions_Well_Completion",
+              "name": "Well_Completion",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Directions_JSObject1.getUserLocation",
               "name": "JSObject1.getUserLocation",
               "collectionId": "Directions_JSObject1",
@@ -2894,14 +2905,6 @@
               "jsonPathKeys": [
                 "async () => {\n  appsmith.geolocation.getCurrentPosition();\n}"
               ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Directions_Well_Completion",
-              "name": "Well_Completion",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ],

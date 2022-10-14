@@ -15,34 +15,16 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Directions",
+    "pageId": "Well Info",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "headers": [
-        {
-          "key": "",
-          "value": ""
-        },
-        {
-          "key": "",
-          "value": ""
-        }
-      ],
+      "headers": [],
       "encodeParamsToggle": true,
-      "queryParameters": [
-        {
-          "key": "",
-          "value": ""
-        },
-        {
-          "key": "",
-          "value": ""
-        }
-      ],
-      "body": "",
+      "queryParameters": [],
       "bodyFormData": [],
       "httpMethod": "GET",
+      "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -53,6 +35,7 @@
       }
     },
     "executeOnLoad": false,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
@@ -62,7 +45,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Directions_Api1",
+  "id": "Well Info_Api1",
   "deleted": false,
   "gitSyncId": "634605d961a6260030f07ffb_6346084e1a2a765232cab174"
 }

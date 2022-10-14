@@ -14,13 +14,14 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Directions",
-    "collectionId": "Directions_JSObject1",
+    "pageId": "Well Info",
+    "collectionId": "Well Info_JSObject1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "(data, labelKey, valueKey) => {\n  let dupValues = data.map(row => {\n    return {\n      'label': row[labelKey],\n      'value': row[valueKey]\n    };\n  });\n  let output = {};\n  dupValues.forEach(option => {\n    output[option.label] = option;\n  });\n  let outputProps = Object.getOwnPropertyNames(output);\n  let options = outputProps.map(prop => output[prop]);\n  return _.sortBy(options, 'value');\n}",
+      "selfReferencingDataPaths": [],
       "jsArguments": [
         {},
         {},
@@ -45,7 +46,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Directions_JSObject1.getSelectOptions",
+  "id": "Well Info_JSObject1.getSelectOptions",
   "deleted": false,
   "gitSyncId": "6269a377d8480440cf788b59_6269a377d8480440cf788b5e"
 }

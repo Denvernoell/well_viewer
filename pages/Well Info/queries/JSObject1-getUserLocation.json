@@ -14,13 +14,14 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Directions",
-    "collectionId": "Directions_JSObject1",
+    "pageId": "Well Info",
+    "collectionId": "Well Info_JSObject1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "async () => {\n  appsmith.geolocation.getCurrentPosition();\n}",
+      "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },
@@ -41,7 +42,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Directions_JSObject1.getUserLocation",
+  "id": "Well Info_JSObject1.getUserLocation",
   "deleted": false,
   "gitSyncId": "6269a377d8480440cf788b59_62841f42309fd93a9bf11017"
 }

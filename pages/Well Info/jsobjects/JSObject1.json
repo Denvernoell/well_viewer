@@ -1,7 +1,7 @@
 {
   "unpublishedCollection": {
     "name": "JSObject1",
-    "pageId": "Directions",
+    "pageId": "Well Info",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -9,7 +9,7 @@
     "body": "export default {\n\n\t\tgetSelectOptions: (data, labelKey, valueKey) => {  \n\t\t// creates a deduplicated array of SelectOptions from data \n\t\tlet dupValues = data.map(row => {return {'label':row[labelKey], 'value':row[valueKey]}});\n\t\tlet output = {};\n\t\tdupValues.forEach(option => {output[option.label] = option});\n\t\tlet outputProps = Object.getOwnPropertyNames(output);\n\t\t// duplicate labels get overwritten with the last value\n\t\tlet options = outputProps.map(prop => output[prop]);\n\t\treturn _.sortBy(options, 'value')\n\t},\n\t\n\tgetUserLocation: async () => {\n\t\tappsmith.geolocation.getCurrentPosition()\n\t}\n\t\n}",
     "variables": []
   },
-  "id": "Directions_JSObject1",
+  "id": "Well Info_JSObject1",
   "deleted": false,
   "gitSyncId": "6261df7d00cba01cd02f2d9c_6266d21000cba01cd03016eb"
 }

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Well_Completion",
+    "name": "Wells",
     "datasource": {
       "name": "Aliso",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,13 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Directions",
+    "pageId": "Well Info",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM public.well_completion_reports;",
+      "body": "SELECT * FROM public.well_locations_master;",
+      "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -36,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Directions_Well_Completion",
+  "id": "Well Info_Wells",
   "deleted": false,
-  "gitSyncId": "634605d961a6260030f07ffb_6346127b89020c7ac296ccaa"
+  "gitSyncId": "634605d961a6260030f07ffb_6346085761a6260030f0801d"
 }

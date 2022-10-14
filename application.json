@@ -3,6 +3,10 @@
     {
       "id": "Well Info",
       "isDefault": true
+    },
+    {
+      "id": "Subsidence",
+      "isDefault": false
     }
   ],
   "viewMode": false,

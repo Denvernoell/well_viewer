@@ -136,7 +136,7 @@
               "zoomLevel": 50,
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "widgetName": "Map1",
-              "defaultMarkers": "{{\nsubsidence_points.data.filter(\n  point => point.point_id == \n  Monument.selectedOptionLabel\n).map(point =>([{\"lat\":point.latitude,\"long\":point.longitude,\"title\":point.point_id}]))\n}}",
+              "defaultMarkers": "{{\nunique_options.getSelectOptions(\n\tsubsidence_points.data.filter(point => point.client == Client.selectedOptionValue))\n\t.map(point =>({\"lat\":point.latitude,\"long\":point.longitude,\"title\":point.point_id}))\n}}",
               "displayName": "Map",
               "iconSVG": "/static/media/icon.ddde7d1b6b4d64050fde21a347260464.svg",
               "topRow": 10,
@@ -181,6 +181,7 @@
             },
             {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "setAdaptiveYMin": true,
               "widgetName": "Chart1",
               "allowScroll": false,
               "displayName": "Chart",

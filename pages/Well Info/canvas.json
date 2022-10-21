@@ -1400,7 +1400,7 @@
                       "topRow": 75,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
-                      "inlineEditingSaveOption": "ROW_LEVEL",
+                      "inlineEditingSaveOption": "CUSTOM",
                       "animateLoading": true,
                       "dynamicBindingPathList": [
                         {
@@ -1516,21 +1516,6 @@
                         },
                         {
                           "key": "primaryColumns.geometry.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.saveButtonColor"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.saveBorderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.discardBorderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.isSaveDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.isDiscardDisabled"
                         }
                       ],
                       "leftColumn": 1,
@@ -1568,15 +1553,17 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "primaryColumnId": "Well_ID",
                       "defaultSelectedRowIndices": [
                         0
                       ],
                       "widgetName": "Table3",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "Cmmn_Ow",
-                        "Parcel",
                         "Well_ID",
+                        "Cmmn_Ow",
+                        "GSE",
+                        "Parcel",
                         "Well_Nm",
                         "Wll_N_O",
                         "Stt_W_N",
@@ -1585,7 +1572,6 @@
                         "Ownr_O1",
                         "Ownr_O2",
                         "Msrd_By",
-                        "GSE",
                         "GSE_DEM",
                         "GSE_Srv",
                         "Aquifer",
@@ -1597,17 +1583,9 @@
                         "Note",
                         "GSE_fKS",
                         "Us_In_S",
-                        "geometry",
-                        "EditActions1"
+                        "geometry"
                       ],
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "primaryColumns.EditActions1.isSaveDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.isDiscardDisabled"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "Table",
                       "bottomRow": 134,
                       "columnWidthMap": {
@@ -1685,8 +1663,8 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": true,
-                          "isEditable": true,
+                          "isCellEditable": false,
+                          "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Well_ID",
@@ -1758,7 +1736,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -1783,7 +1761,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -1808,7 +1786,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -1833,7 +1811,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -1858,7 +1836,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -1883,7 +1861,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -1933,7 +1911,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -1958,7 +1936,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -1983,7 +1961,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -2008,7 +1986,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -2033,7 +2011,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -2058,7 +2036,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -2083,7 +2061,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -2108,7 +2086,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -2133,7 +2111,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -2158,7 +2136,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -2183,7 +2161,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -2208,7 +2186,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": true,
                           "isEditable": true,
@@ -2219,43 +2197,6 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"geometry\"]))}}",
                           "validation": {}
-                        },
-                        "EditActions1": {
-                          "allowCellWrapping": false,
-                          "index": 10,
-                          "width": 150,
-                          "originalId": "EditActions1",
-                          "id": "EditActions1",
-                          "alias": "EditActions1",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "editActions",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": true,
-                          "label": "Save / Discard",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "",
-                          "validation": {},
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "saveIconAlign": "left",
-                          "discardIconAlign": "left",
-                          "saveActionLabel": "Save",
-                          "discardActionLabel": "Discard",
-                          "saveButtonColor": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                          "discardButtonColor": "#F22B2B",
-                          "saveBorderRadius": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "discardBorderRadius": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "discardButtonVariant": "TERTIARY",
-                          "isSaveDisabled": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( !Table3.updatedRowIndices.includes(currentIndex)))}}",
-                          "isDiscardDisabled": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( !Table3.updatedRowIndices.includes(currentIndex)))}}"
                         }
                       },
                       "key": "f4uvyzv3yu",
@@ -3955,6 +3896,17 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Well Info_JSObject1.getUserLocation",
+              "name": "JSObject1.getUserLocation",
+              "collectionId": "Well Info_JSObject1",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  appsmith.geolocation.getCurrentPosition();\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Well Info_Well_Completion",
               "name": "Well_Completion",
               "confirmBeforeExecute": false,
@@ -3968,19 +3920,6 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Well Info_JSObject1.getUserLocation",
-              "name": "JSObject1.getUserLocation",
-              "collectionId": "Well Info_JSObject1",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async () => {\n  appsmith.geolocation.getCurrentPosition();\n}"
-              ],
               "timeoutInMillisecond": 10000
             }
           ]

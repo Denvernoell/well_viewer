@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 2840,
+          "bottomRow": 2580,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -262,7 +262,7 @@
                       "dynamicBindingPathList": [],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Water Quality",
+                      "text": "Well Edits",
                       "key": "vfl8u1k21a",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
@@ -2256,7 +2256,7 @@
                 "group"
               ],
               "topRow": 154,
-              "bottomRow": 289,
+              "bottomRow": 250,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -2277,7 +2277,7 @@
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 1290,
+                  "bottomRow": 930,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -3751,115 +3751,6 @@
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "fontSize": "1rem"
-                    },
-                    {
-                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-                      "setAdaptiveYMin": false,
-                      "widgetName": "Chart2",
-                      "allowScroll": false,
-                      "displayName": "Chart",
-                      "iconSVG": "/static/media/icon.6adbe31ed817fc4bfd66f9f0a6fc105c.svg",
-                      "searchTags": [
-                        "graph",
-                        "visuals",
-                        "visualisations"
-                      ],
-                      "topRow": 95,
-                      "bottomRow": 127,
-                      "parentRowSpace": 10,
-                      "type": "CHART_WIDGET",
-                      "hideCard": false,
-                      "chartData": {
-                        "aixl857mz7": {
-                          "seriesName": "Sales",
-                          "data": "\n{{Table3.tableData.map(p => ({x:p.date,y:p.value}))}}\n"
-                        }
-                      },
-                      "animateLoading": true,
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "parentColumnSpace": 19.5,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 1,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "borderRadius"
-                        },
-                        {
-                          "key": "boxShadow"
-                        },
-                        {
-                          "key": "accentColor"
-                        },
-                        {
-                          "key": "fontFamily"
-                        },
-                        {
-                          "key": "chartData.aixl857mz7.data"
-                        }
-                      ],
-                      "customFusionChartConfig": {
-                        "type": "column2d",
-                        "dataSource": {
-                          "data": [
-                            {
-                              "label": "Product1",
-                              "value": 20000
-                            },
-                            {
-                              "label": "Product2",
-                              "value": 22000
-                            },
-                            {
-                              "label": "Product3",
-                              "value": 32000
-                            }
-                          ],
-                          "chart": {
-                            "caption": "Sales Report",
-                            "xAxisName": "Product Line",
-                            "yAxisName": "Revenue($)",
-                            "theme": "fusion",
-                            "alignCaptionWithCanvas": 1,
-                            "captionFontSize": "24",
-                            "captionAlignment": "center",
-                            "captionPadding": "20",
-                            "captionFontColor": "#231F20",
-                            "legendIconSides": "4",
-                            "legendIconBgAlpha": "100",
-                            "legendIconAlpha": "100",
-                            "legendPosition": "top",
-                            "canvasPadding": "0",
-                            "chartLeftMargin": "20",
-                            "chartTopMargin": "10",
-                            "chartRightMargin": "40",
-                            "chartBottomMargin": "10",
-                            "xAxisNameFontSize": "14",
-                            "labelFontSize": "12",
-                            "labelFontColor": "#716E6E",
-                            "xAxisNameFontColor": "#716E6E",
-                            "yAxisNameFontSize": "14",
-                            "yAxisValueFontSize": "12",
-                            "yAxisValueFontColor": "#716E6E",
-                            "yAxisNameFontColor": "#716E6E"
-                          }
-                        }
-                      },
-                      "key": "niog5q3vxl",
-                      "isDeprecated": false,
-                      "rightColumn": 62,
-                      "widgetId": "1oz1y7tyvn",
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "9nk9igm7g7",
-                      "labelOrientation": "auto",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "yAxisName": "Flow",
-                      "chartName": "CDEC GAL",
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "xAxisName": "Date",
-                      "chartType": "COLUMN_CHART"
                     }
                   ],
                   "key": "w4o26i2y8g",
@@ -3896,17 +3787,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Well Info_JSObject1.getUserLocation",
-              "name": "JSObject1.getUserLocation",
-              "collectionId": "Well Info_JSObject1",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async () => {\n  appsmith.geolocation.getCurrentPosition();\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Well Info_Well_Completion",
               "name": "Well_Completion",
               "confirmBeforeExecute": false,
@@ -3920,6 +3800,19 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Well Info_JSObject1.getUserLocation",
+              "name": "JSObject1.getUserLocation",
+              "collectionId": "Well Info_JSObject1",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  appsmith.geolocation.getCurrentPosition();\n}"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]

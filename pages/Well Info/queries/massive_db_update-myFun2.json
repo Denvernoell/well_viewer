@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "updateMany",
-    "fullyQualifiedName": "wells_update_js.updateMany",
+    "name": "myFun2",
+    "fullyQualifiedName": "massive_db_update.myFun2",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,17 +14,18 @@
       "userPermissions": []
     },
     "pageId": "Well Info",
-    "collectionId": "Well Info_wells_update_js",
+    "collectionId": "Well Info_massive_db_update",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  const updates = well_edits.updatedRows.map(i => update_wells.run(i.allFields));\n  return updates;\n}",
+      "body": "async () => {}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  const updates = well_edits.updatedRows.map(i => update_wells.run(i.allFields));\n  return updates;\n}"
+      "async () => {}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Well Info_wells_update_js.updateMany",
+  "id": "Well Info_massive_db_update.myFun2",
   "deleted": false,
-  "gitSyncId": "634605d961a6260030f07ffb_63530cf931cf9c0f4917e215"
+  "gitSyncId": "634605d961a6260030f07ffb_635c559911fe930ca2db2416"
 }

@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun2",
-    "fullyQualifiedName": "update_table.myFun2",
+    "name": "update_cell",
+    "fullyQualifiedName": "update_wells_js.update_cell",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,14 +14,16 @@
       "userPermissions": []
     },
     "pageId": "Well Info",
-    "collectionId": "Well Info_update_table",
+    "collectionId": "Well Info_update_wells_js",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {}",
+      "body": "async currentRow => {\n  await storeValue(\"rowUpdate\", currentRow);\n  await update_wells.run({\n    currentRow\n  });\n  await fetch_wells.run();\n}",
       "selfReferencingDataPaths": [],
-      "jsArguments": [],
+      "jsArguments": [
+        {}
+      ],
       "isAsync": true
     },
     "executeOnLoad": false,
@@ -35,14 +37,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {}"
+      "async currentRow => {\n  await storeValue(\"rowUpdate\", currentRow);\n  await update_wells.run({\n    currentRow\n  });\n  await fetch_wells.run();\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Well Info_update_table.myFun2",
+  "id": "Well Info_update_wells_js.update_cell",
   "deleted": false,
-  "gitSyncId": "634605d961a6260030f07ffb_63530a7131cf9c0f4917e1ff"
+  "gitSyncId": "634605d961a6260030f07ffb_63530a7131cf9c0f4917e201"
 }

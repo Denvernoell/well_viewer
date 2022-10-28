@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Wells",
+    "name": "update_wells",
     "datasource": {
       "name": "Aliso",
       "pluginId": "postgres-plugin",
@@ -18,26 +18,33 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM public.well_locations_master;",
+      "body": "UPDATE public.well_locations_master SET \n  Cmmn_Ow = {{this.params.currentRow.Parcel}}\n  WHERE Well_ID = {{ this.params.currentRow.Well_ID }};\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ]
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "this.params.currentRow.Parcel",
+      "this.params.currentRow.Well_ID"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Well Info_Wells",
+  "id": "Well Info_update_wells",
   "deleted": false,
-  "gitSyncId": "634605d961a6260030f07ffb_6346085761a6260030f0801d"
+  "gitSyncId": "634605d961a6260030f07ffb_63530aacf6cdb970519bf25f"
 }

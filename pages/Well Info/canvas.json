@@ -85,7 +85,7 @@
                       "leftColumn": 4,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Aliso Wells",
+                      "text": "Aliso fetch_wells",
                       "key": "czyq0gtp0e",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 25,
@@ -200,7 +200,7 @@
             },
             {
               "boxShadow": "2px 2px 0px rgba(0, 0, 0, 0.25)",
-              "widgetName": "Container2",
+              "widgetName": "Well_Edits",
               "borderColor": "transparent",
               "isCanvas": true,
               "dynamicPropertyPathList": [
@@ -214,7 +214,7 @@
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
               "topRow": 15,
-              "bottomRow": 174,
+              "bottomRow": 211,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -229,7 +229,7 @@
                   "widgetName": "Canvas2",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 1400,
+                  "bottomRow": 1950,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -993,7 +993,7 @@
                       "rightColumn": 37,
                       "textSize": "0.875rem",
                       "widgetId": "ep6j4w5d4c",
-                      "tableData": "{{Wells.data.filter(user => user.Cmmn_Ow == Select1.selectedOptionValue)}}",
+                      "tableData": "{{fetch_wells.data.filter(user => user.Cmmn_Ow == Select1.selectedOptionValue)}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "e9ka39c0lu",
@@ -1116,7 +1116,7 @@
                       "dynamicBindingPathList": [],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Wells",
+                      "text": "fetch_wells",
                       "key": "vfl8u1k21a",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 14,
@@ -1290,7 +1290,7 @@
                         }
                       ],
                       "labelPosition": "Left",
-                      "options": "{{JSObject1.getSelectOptions(Wells.data,'Cmmn_Ow', 'Cmmn_Ow')}}",
+                      "options": "{{JSObject1.getSelectOptions(fetch_wells.data,'Cmmn_Ow', 'Cmmn_Ow')}}",
                       "labelStyle": "BOLD",
                       "placeholderText": "Select Owner",
                       "isDisabled": false,
@@ -1307,7 +1307,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "0px",
-                      "onOptionChange": "{{Wells.run()}}"
+                      "onOptionChange": "{{fetch_wells.run()}}"
                     },
                     {
                       "boxShadow": "none",
@@ -1400,7 +1400,7 @@
                       "topRow": 69,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
-                      "inlineEditingSaveOption": "ROW_LEVEL",
+                      "inlineEditingSaveOption": "CUSTOM",
                       "animateLoading": true,
                       "dynamicBindingPathList": [
                         {
@@ -1516,21 +1516,6 @@
                         },
                         {
                           "key": "primaryColumns.geometry.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.saveButtonColor"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.saveBorderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.discardBorderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.isSaveDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.isDiscardDisabled"
                         }
                       ],
                       "leftColumn": 1,
@@ -1572,7 +1557,7 @@
                       "defaultSelectedRowIndices": [
                         0
                       ],
-                      "widgetName": "Table3",
+                      "widgetName": "well_edits",
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "Well_ID",
@@ -1598,17 +1583,9 @@
                         "Note",
                         "GSE_fKS",
                         "Us_In_S",
-                        "geometry",
-                        "EditActions1"
+                        "geometry"
                       ],
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "primaryColumns.EditActions1.isSaveDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.isDiscardDisabled"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "Table",
                       "bottomRow": 109,
                       "columnWidthMap": {
@@ -1643,7 +1620,7 @@
                           "label": "Cmmn_Ow",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Cmmn_Ow\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Cmmn_Ow\"]))}}",
                           "validation": {}
                         },
                         "Parcel": {
@@ -1668,7 +1645,7 @@
                           "label": "Parcel",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Parcel\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Parcel\"]))}}",
                           "validation": {}
                         },
                         "Well_ID": {
@@ -1693,7 +1670,7 @@
                           "label": "Well_ID",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Well_ID\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Well_ID\"]))}}",
                           "validation": {}
                         },
                         "Well_Nm": {
@@ -1718,7 +1695,7 @@
                           "label": "Well_Nm",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Well_Nm\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Well_Nm\"]))}}",
                           "validation": {}
                         },
                         "Wll_N_O": {
@@ -1743,7 +1720,7 @@
                           "label": "Wll_N_O",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Wll_N_O\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Wll_N_O\"]))}}",
                           "validation": {}
                         },
                         "Stt_W_N": {
@@ -1768,7 +1745,7 @@
                           "label": "Stt_W_N",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Stt_W_N\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Stt_W_N\"]))}}",
                           "validation": {}
                         },
                         "Site_Cd": {
@@ -1793,7 +1770,7 @@
                           "label": "Site_Cd",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Site_Cd\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Site_Cd\"]))}}",
                           "validation": {}
                         },
                         "Ownr_Wl": {
@@ -1818,7 +1795,7 @@
                           "label": "Ownr_Wl",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Ownr_Wl\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Ownr_Wl\"]))}}",
                           "validation": {}
                         },
                         "Ownr_O1": {
@@ -1843,7 +1820,7 @@
                           "label": "Ownr_O1",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Ownr_O1\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Ownr_O1\"]))}}",
                           "validation": {}
                         },
                         "Ownr_O2": {
@@ -1868,7 +1845,7 @@
                           "label": "Ownr_O2",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Ownr_O2\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Ownr_O2\"]))}}",
                           "validation": {}
                         },
                         "Msrd_By": {
@@ -1893,7 +1870,7 @@
                           "label": "Msrd_By",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Msrd_By\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Msrd_By\"]))}}",
                           "validation": {}
                         },
                         "GSE": {
@@ -1918,7 +1895,7 @@
                           "label": "GSE",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"GSE\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"GSE\"]))}}",
                           "validation": {}
                         },
                         "GSE_DEM": {
@@ -1943,7 +1920,7 @@
                           "label": "GSE_DEM",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"GSE_DEM\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"GSE_DEM\"]))}}",
                           "validation": {}
                         },
                         "GSE_Srv": {
@@ -1968,7 +1945,7 @@
                           "label": "GSE_Srv",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"GSE_Srv\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"GSE_Srv\"]))}}",
                           "validation": {}
                         },
                         "Aquifer": {
@@ -1993,7 +1970,7 @@
                           "label": "Aquifer",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Aquifer\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Aquifer\"]))}}",
                           "validation": {}
                         },
                         "Perf_ft": {
@@ -2018,7 +1995,7 @@
                           "label": "Perf_ft",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Perf_ft\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Perf_ft\"]))}}",
                           "validation": {}
                         },
                         "Ttl_Dpt": {
@@ -2043,7 +2020,7 @@
                           "label": "Ttl_Dpt",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Ttl_Dpt\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Ttl_Dpt\"]))}}",
                           "validation": {}
                         },
                         "WCR_No": {
@@ -2068,7 +2045,7 @@
                           "label": "WCR_No",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"WCR_No\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"WCR_No\"]))}}",
                           "validation": {}
                         },
                         "X": {
@@ -2093,7 +2070,7 @@
                           "label": "X",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"X\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"X\"]))}}",
                           "validation": {}
                         },
                         "Y": {
@@ -2118,7 +2095,7 @@
                           "label": "Y",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Y\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Y\"]))}}",
                           "validation": {}
                         },
                         "Note": {
@@ -2143,7 +2120,7 @@
                           "label": "Note",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Note\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Note\"]))}}",
                           "validation": {}
                         },
                         "GSE_fKS": {
@@ -2168,7 +2145,7 @@
                           "label": "GSE_fKS",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"GSE_fKS\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"GSE_fKS\"]))}}",
                           "validation": {}
                         },
                         "Us_In_S": {
@@ -2193,7 +2170,7 @@
                           "label": "Us_In_S",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Us_In_S\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Us_In_S\"]))}}",
                           "validation": {}
                         },
                         "geometry": {
@@ -2218,42 +2195,8 @@
                           "label": "geometry",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"geometry\"]))}}",
+                          "computedValue": "{{well_edits.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"geometry\"]))}}",
                           "validation": {}
-                        },
-                        "EditActions1": {
-                          "allowCellWrapping": false,
-                          "index": 10,
-                          "width": 150,
-                          "originalId": "EditActions1",
-                          "id": "EditActions1",
-                          "alias": "EditActions1",
-                          "columnType": "editActions",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": true,
-                          "label": "Save / Discard",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "",
-                          "validation": {},
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "saveIconAlign": "left",
-                          "discardIconAlign": "left",
-                          "saveActionLabel": "Save",
-                          "discardActionLabel": "Discard",
-                          "saveButtonColor": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                          "discardButtonColor": "#F22B2B",
-                          "saveBorderRadius": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "discardBorderRadius": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "discardButtonVariant": "TERTIARY",
-                          "isSaveDisabled": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( !Table3.updatedRowIndices.includes(currentIndex)))}}",
-                          "isDiscardDisabled": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( !Table3.updatedRowIndices.includes(currentIndex)))}}"
                         }
                       },
                       "key": "f4uvyzv3yu",
@@ -2261,7 +2204,7 @@
                       "rightColumn": 62,
                       "textSize": "0.875rem",
                       "widgetId": "zv04q3pcqg",
-                      "tableData": "{{Wells.data.filter(user => user.Cmmn_Ow == Select1.selectedOptionValue)}}",
+                      "tableData": "{{fetch_wells.data.filter(user => user.Cmmn_Ow == Select1.selectedOptionValue)}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "e9ka39c0lu",
@@ -2362,27 +2305,6 @@
                       "animateLoading": true,
                       "dynamicBindingPathList": [
                         {
-                          "key": "primaryColumns.step.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.task.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.status.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.action.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.action.buttonColor"
-                        },
-                        {
-                          "key": "primaryColumns.action.borderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.action.boxShadow"
-                        },
-                        {
                           "key": "accentColor"
                         },
                         {
@@ -2423,6 +2345,18 @@
                         },
                         {
                           "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.index.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Well_ID.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.updatedFields.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.allFields.computedValue"
                         }
                       ],
                       "leftColumn": 1,
@@ -2462,13 +2396,13 @@
                       "defaultSelectedRowIndices": [
                         0
                       ],
-                      "widgetName": "Table4",
+                      "widgetName": "well_changes",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "step",
-                        "task",
-                        "status",
-                        "action"
+                        "index",
+                        "Well_ID",
+                        "updatedFields",
+                        "allFields"
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
@@ -2484,33 +2418,38 @@
                       "dynamicTriggerPathList": [],
                       "borderWidth": "1",
                       "primaryColumns": {
-                        "step": {
+                        "index": {
+                          "allowCellWrapping": false,
                           "index": 0,
                           "width": 150,
-                          "id": "step",
-                          "originalId": "step",
-                          "alias": "step",
+                          "originalId": "index",
+                          "id": "index",
+                          "alias": "index",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "number",
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
-                          "isCellVisible": true,
+                          "isDisabled": false,
                           "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
                           "isDerived": false,
-                          "label": "step",
-                          "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"step\"]))}}",
-                          "validation": {},
-                          "labelColor": "#FFFFFF"
+                          "label": "index",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{well_changes.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"index\"]))}}",
+                          "validation": {}
                         },
-                        "task": {
+                        "Well_ID": {
+                          "allowCellWrapping": false,
                           "index": 1,
                           "width": 150,
-                          "id": "task",
-                          "originalId": "task",
-                          "alias": "task",
+                          "originalId": "Well_ID",
+                          "id": "Well_ID",
+                          "alias": "Well_ID",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
@@ -2518,20 +2457,24 @@
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
-                          "isCellVisible": true,
+                          "isDisabled": false,
                           "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
                           "isDerived": false,
-                          "label": "task",
-                          "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
-                          "validation": {},
-                          "labelColor": "#FFFFFF"
+                          "label": "Well_ID",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{well_changes.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Well_ID\"]))}}",
+                          "validation": {}
                         },
-                        "status": {
+                        "updatedFields": {
+                          "allowCellWrapping": false,
                           "index": 2,
                           "width": 150,
-                          "id": "status",
-                          "originalId": "status",
-                          "alias": "status",
+                          "originalId": "updatedFields",
+                          "id": "updatedFields",
+                          "alias": "updatedFields",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
@@ -2539,39 +2482,41 @@
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
-                          "isCellVisible": true,
+                          "isDisabled": false,
                           "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
                           "isDerived": false,
-                          "label": "status",
-                          "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
-                          "validation": {},
-                          "labelColor": "#FFFFFF"
+                          "label": "updatedFields",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{well_changes.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"updatedFields\"]))}}",
+                          "validation": {}
                         },
-                        "action": {
+                        "allFields": {
+                          "allowCellWrapping": false,
                           "index": 3,
                           "width": 150,
-                          "id": "action",
-                          "originalId": "action",
-                          "alias": "action",
+                          "originalId": "allFields",
+                          "id": "allFields",
+                          "alias": "allFields",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "button",
+                          "columnType": "text",
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
-                          "isCellVisible": true,
-                          "isCellEditable": false,
                           "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
                           "isDerived": false,
-                          "label": "action",
-                          "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                          "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"action\"]))}}",
-                          "validation": {},
-                          "labelColor": "#FFFFFF",
-                          "buttonColor": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                          "borderRadius": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "boxShadow": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}"
+                          "label": "allFields",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{well_changes.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"allFields\"]))}}",
+                          "validation": {}
                         }
                       },
                       "key": "rwghtkicly",
@@ -2579,7 +2524,7 @@
                       "rightColumn": 62,
                       "textSize": "0.875rem",
                       "widgetId": "sr999yiaoo",
-                      "tableData": "{{Table3.updatedRows}}",
+                      "tableData": "{{well_edits.updatedRows}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "e9ka39c0lu",
@@ -2588,6 +2533,54 @@
                       "isVisibleSearch": true,
                       "isVisiblePagination": true,
                       "verticalAlignment": "CENTER"
+                    },
+                    {
+                      "widgetName": "Text8",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                      "searchTags": [
+                        "typography",
+                        "paragraph",
+                        "label"
+                      ],
+                      "topRow": 139,
+                      "bottomRow": 193,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 19.5,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "text": "{{\nwell_edits.updatedRows\n}}",
+                      "key": "yf0dnxjnxn",
+                      "isDeprecated": false,
+                      "rightColumn": 63,
+                      "textAlign": "LEFT",
+                      "widgetId": "68j6de1cx0",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "e9ka39c0lu",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "fontSize": "1rem"
                     }
                   ],
                   "key": "9g0upztcvp",
@@ -2630,7 +2623,7 @@
                 "parent",
                 "group"
               ],
-              "topRow": 174,
+              "topRow": 212,
               "bottomRow": 250,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
@@ -4162,17 +4155,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Well Info_JSObject1.getUserLocation",
-              "name": "JSObject1.getUserLocation",
-              "collectionId": "Well Info_JSObject1",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async () => {\n  appsmith.geolocation.getCurrentPosition();\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Well Info_Well_Completion",
               "name": "Well_Completion",
               "confirmBeforeExecute": false,
@@ -4181,11 +4163,24 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Well Info_Wells",
-              "name": "Wells",
+              "id": "Well Info_fetch_wells",
+              "name": "fetch_wells",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Well Info_JSObject1.getUserLocation",
+              "name": "JSObject1.getUserLocation",
+              "collectionId": "Well Info_JSObject1",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  appsmith.geolocation.getCurrentPosition();\n}"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]

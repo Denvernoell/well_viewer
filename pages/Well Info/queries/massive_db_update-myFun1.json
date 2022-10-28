@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "myFun1",
-    "fullyQualifiedName": "update_table.myFun1",
+    "fullyQualifiedName": "massive_db_update.myFun1",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "Well Info",
-    "collectionId": "Well Info_update_table",
+    "collectionId": "Well Info_massive_db_update",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -42,7 +42,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Well Info_update_table.myFun1",
+  "id": "Well Info_massive_db_update.myFun1",
   "deleted": false,
-  "gitSyncId": "634605d961a6260030f07ffb_63530a7131cf9c0f4917e201"
+  "gitSyncId": "634605d961a6260030f07ffb_635c559911fe930ca2db2417"
 }

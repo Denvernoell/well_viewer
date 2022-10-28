@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "update_wells_js",
+    "pageId": "Well Info",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tupdate_cell: async (currentRow) => {\n\t\tawait storeValue(\"rowUpdate\",currentRow);\n\t\tawait update_wells.run({currentRow});\n\t\tawait fetch_wells.run();\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Well Info_update_wells_js",
+  "deleted": false,
+  "gitSyncId": "634605d961a6260030f07ffb_63530a7131cf9c0f4917e203"
+}

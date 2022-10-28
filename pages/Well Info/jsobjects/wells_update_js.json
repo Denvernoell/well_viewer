@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tupdateMany: () => {\n\t\tconst updates = Table3.updatedRows.map(i => wells_update.run(i.allFields));\n\t\treturn Promise.all(updates)\n\t\t.then(() => get_movies.run())\n\t}\n}",
+    "body": "export default {\n\tupdateMany: () => {\n\t\tconst updates = well_edits.updatedRows.map(i => update_wells.run(i.allFields));\n\t\treturn updates\n\t}\n}\n",
     "variables": [],
     "userPermissions": []
   },

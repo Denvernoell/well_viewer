@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "wells_update",
+    "name": "fetch_wells",
     "datasource": {
       "name": "Aliso",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE public.well_locations_master\n  SET status = 'APPROVED'\n  WHERE id = {{ usersTable.selectedRow.id }};\n",
+      "body": "SELECT * FROM public.well_locations_master;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,24 +26,18 @@
         }
       ]
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "usersTable.selectedRow.id"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Well Info_wells_update",
+  "id": "Well Info_fetch_wells",
   "deleted": false,
-  "gitSyncId": "634605d961a6260030f07ffb_63530aacf6cdb970519bf25f"
+  "gitSyncId": "634605d961a6260030f07ffb_6346085761a6260030f0801d"
 }

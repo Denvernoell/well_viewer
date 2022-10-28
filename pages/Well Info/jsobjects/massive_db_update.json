@@ -1,12 +1,12 @@
 {
   "unpublishedCollection": {
-    "name": "update_table",
+    "name": "massive_db_update",
     "pageId": "Well Info",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "body": "export default {\n\tvar Massive = require(\"massive\");\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
     "variables": [
       {
         "name": "myVar1",
@@ -19,7 +19,7 @@
     ],
     "userPermissions": []
   },
-  "id": "Well Info_update_table",
+  "id": "Well Info_massive_db_update",
   "deleted": false,
-  "gitSyncId": "634605d961a6260030f07ffb_63530a7131cf9c0f4917e203"
+  "gitSyncId": "634605d961a6260030f07ffb_635c559911fe930ca2db241a"
 }

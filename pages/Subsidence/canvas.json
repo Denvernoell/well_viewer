@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 890,
+          "bottomRow": 1520,
           "containerStyle": "none",
           "snapRows": 81,
           "parentRowSpace": 1,
@@ -199,14 +199,14 @@
               "chartData": {
                 "0iokv1v1m3": {
                   "seriesName": "Sales",
-                  "data": "{{\nsubsidence_points.data.filter(\n  point => point.point_id == \n  Monument.selectedOptionLabel\n).map(point =>({x:point.date,y:point.elevation}))\n}}"
+                  "data": "{{\nsubsidence_points.data.filter(\n  point => point.point_id == \n  Monument.selectedOptionLabel\n).map(point =>({x:point.date,y:point.elevation})).sort()\n}}"
                 }
               },
               "animateLoading": true,
               "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
               "parentColumnSpace": 17.9375,
               "dynamicTriggerPathList": [],
-              "leftColumn": 6,
+              "leftColumn": 5,
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
@@ -273,7 +273,7 @@
               },
               "key": "rnn7chqdib",
               "isDeprecated": false,
-              "rightColumn": 30,
+              "rightColumn": 29,
               "widgetId": "skglt6ukp4",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
@@ -747,7 +747,7 @@
               },
               "key": "29wubkfzzs",
               "isDeprecated": false,
-              "rightColumn": 40,
+              "rightColumn": 55,
               "textSize": "0.875rem",
               "widgetId": "6kr9zi2kmy",
               "tableData": "{{\nsubsidence_points.data.filter(\n  point => point.point_id == \n  Monument.selectedOptionLabel\n)\n}}",
@@ -759,6 +759,46 @@
               "isVisibleSearch": true,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
+            },
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "widgetName": "Iframe1",
+              "srcDoc": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>ECharts</title>\n    <!-- Include the ECharts file you just downloaded -->\n    <script src=\"echarts.js\"></script>\n  </head>\n  <body>\n    <!-- Prepare a DOM with a defined width and height for ECharts -->\n    <div id=\"main\" style=\"width: 600px;height:400px;\"></div>\n    <script type=\"text/javascript\">\n      // Initialize the echarts instance based on the prepared dom\n      var myChart = echarts.init(document.getElementById('main'));\n\n      // Specify the configuration items and data for the chart\n      var option = {\n        title: {\n          text: 'ECharts Getting Started Example'\n        },\n        tooltip: {},\n        legend: {\n          data: ['sales']\n        },\n        xAxis: {\n          data: ['Shirts', 'Cardigans', 'Chiffons', 'Pants', 'Heels', 'Socks']\n        },\n        yAxis: {},\n        series: [\n          {\n            name: 'sales',\n            type: 'bar',\n            data: [5, 20, 36, 10, 10, 20]\n          }\n        ]\n      };\n\n      // Display the chart using the configuration items and data just specified.\n      myChart.setOption(option);\n    </script>\n  </body>\n</html>",
+              "displayName": "Iframe",
+              "iconSVG": "/static/media/icon.34169b6acebc8ace125dd1f638974aae.svg",
+              "searchTags": [
+                "embed"
+              ],
+              "topRow": 85,
+              "bottomRow": 144,
+              "parentRowSpace": 10,
+              "source": "",
+              "type": "IFRAME_WIDGET",
+              "hideCard": false,
+              "borderOpacity": 100,
+              "animateLoading": true,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 6,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                }
+              ],
+              "borderWidth": 1,
+              "key": "ru04xqr2cj",
+              "isDeprecated": false,
+              "rightColumn": 58,
+              "widgetId": "01bs69ebiq",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
             }
           ]
         },

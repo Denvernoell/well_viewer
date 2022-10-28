@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "wells_update_js",
+    "pageId": "Well Info",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tupdateMany: () => {\n\t\tconst updates = Table3.updatedRows.map(i => wells_update.run(i.allFields));\n\t\treturn Promise.all(updates)\n\t\t.then(() => get_movies.run())\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Well Info_wells_update_js",
+  "deleted": false,
+  "gitSyncId": "634605d961a6260030f07ffb_63530cb04b1a8d4291236a57"
+}

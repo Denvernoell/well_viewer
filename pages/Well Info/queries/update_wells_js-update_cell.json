@@ -16,18 +16,15 @@
     "pageId": "Well Info",
     "collectionId": "Well Info_update_wells_js",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "async currentRow => {\n  await storeValue(\"rowUpdate\", currentRow);\n  await update_wells.run({\n    currentRow\n  });\n  await fetch_wells.run();\n}",
       "selfReferencingDataPaths": [],
-      "jsArguments": [
-        {}
-      ],
+      "jsArguments": [],
       "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -46,5 +43,5 @@
   },
   "id": "Well Info_update_wells_js.update_cell",
   "deleted": false,
-  "gitSyncId": "634605d961a6260030f07ffb_63530a7131cf9c0f4917e201"
+  "gitSyncId": "634605d961a6260030f07ffb_636064f3dfa75b056e2eb893"
 }

@@ -7,6 +7,10 @@
     {
       "id": "Subsidence",
       "isDefault": false
+    },
+    {
+      "id": "Editable table",
+      "isDefault": false
     }
   ],
   "viewMode": false,

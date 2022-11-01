@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "update_wells",
+    "name": "SelectQuery",
     "datasource": {
       "name": "Aliso",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Well Info",
+    "pageId": "Editable table",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE public.well_locations_master SET\n  {{this.params.currentRow.map(x=>x).join(\", \")}}\n  WHERE Well_ID = {{ this.params.currentRow.Well_ID }};\n",
+      "body": "SELECT * FROM public.\"well_locations_master\"\nWHERE \"Cmmn_Ow\" ilike '%{{data_table.searchText || \"\"}}%'\nORDER BY \"{{data_table.sortOrder.column || 'Parcel'}}\" {{data_table.sortOrder.order || 'ASC'}}\nLIMIT {{data_table.pageSize}}\nOFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,25 +26,23 @@
         }
       ]
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "executeOnLoad": true,
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "this.params.currentRow.Well_ID",
-      "this.params.currentRow.map(x=>x).join(\", \")"
+      "(data_table.pageNo - 1) * data_table.pageSize",
+      "data_table.pageSize",
+      "data_table.searchText || \"\"",
+      "data_table.sortOrder.column || 'Parcel'",
+      "data_table.sortOrder.order || 'ASC'"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Well Info_update_wells",
+  "id": "Editable table_SelectQuery",
   "deleted": false,
-  "gitSyncId": "634605d961a6260030f07ffb_63530aacf6cdb970519bf25f"
+  "gitSyncId": "634605d961a6260030f07ffb_63606583dfa75b056e2eb89a"
 }

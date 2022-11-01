@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "update_wells",
+    "name": "DeleteQuery",
     "datasource": {
       "name": "Aliso",
       "pluginId": "postgres-plugin",
@@ -13,38 +13,32 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Well Info",
+    "pageId": "Editable table",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE public.well_locations_master SET\n  {{this.params.currentRow.map(x=>x).join(\", \")}}\n  WHERE Well_ID = {{ this.params.currentRow.Well_ID }};\n",
+      "body": "DELETE FROM public.\"well_locations_master\"\n  WHERE \"Parcel\" = {{data_table.triggeredRow.Parcel}};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ]
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "this.params.currentRow.Well_ID",
-      "this.params.currentRow.map(x=>x).join(\", \")"
+      "data_table.triggeredRow.Parcel"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Well Info_update_wells",
+  "id": "Editable table_DeleteQuery",
   "deleted": false,
-  "gitSyncId": "634605d961a6260030f07ffb_63530aacf6cdb970519bf25f"
+  "gitSyncId": "634605d961a6260030f07ffb_63606583dfa75b056e2eb89c"
 }
